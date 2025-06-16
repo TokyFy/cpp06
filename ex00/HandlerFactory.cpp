@@ -1,8 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HandlerFactory.cpp                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: franaivo <franaivo@student.42antananarivo  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/16 16:39:11 by franaivo          #+#    #+#             */
+/*   Updated: 2025/06/16 16:39:12 by franaivo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <HandlerFactory.hpp>
-#include <CharHandler.hpp>
-#include <NumericsHandler.hpp>
-#include <stdlib.h>
-#include <iostream>
 
 bool isCharLitteral(const std::string& litteral)
 {

@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: franaivo <franaivo@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 16:39:26 by franaivo          #+#    #+#             */
-/*   Updated: 2025/06/16 16:39:27 by franaivo         ###   ########.fr       */
+/*   Created: 2025/06/16 16:41:26 by franaivo          #+#    #+#             */
+/*   Updated: 2025/06/16 16:41:38 by franaivo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include <Base.hpp>
+#include <identify.hpp>
 
-#include <string>
-#include <iostream>
-#include <HandlerFactory.hpp>
-
-class ScalarConverter
+int main()
 {
-    private :
-        ScalarConverter();
-        ~ScalarConverter();
-        ScalarConverter(const ScalarConverter&);
-        ScalarConverter operator=(const ScalarConverter&);
-    public:
-        static void convert(const std::string&);
-};
+    std::srand(time(0));
+
+    int i = 5;
+    while(i-- > 0)
+    {
+        Base *base = generate();
+        identify(base);
+        identify(*base);
+        delete base;
+        std::cout << std::endl;
+    }
+
+    Base *null = NULL;
+    identify(null);
+    identify(null);
+
+    return 0;
+}

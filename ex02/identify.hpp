@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   identify.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: franaivo <franaivo@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 16:39:26 by franaivo          #+#    #+#             */
-/*   Updated: 2025/06/16 16:39:27 by franaivo         ###   ########.fr       */
+/*   Created: 2025/06/16 16:41:22 by franaivo          #+#    #+#             */
+/*   Updated: 2025/06/16 16:41:23 by franaivo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
-#include <iostream>
-#include <HandlerFactory.hpp>
+#include <A.hpp>
+#include <B.hpp>
+#include <C.hpp>
+#include <Base.hpp>
 
-class ScalarConverter
-{
-    private :
-        ScalarConverter();
-        ~ScalarConverter();
-        ScalarConverter(const ScalarConverter&);
-        ScalarConverter operator=(const ScalarConverter&);
-    public:
-        static void convert(const std::string&);
-};
+#include <ctime>
+#include <cstdlib>
+#include <iostream>
+
+Base * generate(void);
+void identify(Base* p);
+void identify(Base& p);

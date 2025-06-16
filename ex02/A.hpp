@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: franaivo <franaivo@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 16:39:26 by franaivo          #+#    #+#             */
-/*   Updated: 2025/06/16 16:39:27 by franaivo         ###   ########.fr       */
+/*   Created: 2025/06/16 16:40:56 by franaivo          #+#    #+#             */
+/*   Updated: 2025/06/16 16:40:57 by franaivo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
-#include <iostream>
-#include <HandlerFactory.hpp>
+#include <Base.hpp>
 
-class ScalarConverter
+class A : public Base
 {
-    private :
-        ScalarConverter();
-        ~ScalarConverter();
-        ScalarConverter(const ScalarConverter&);
-        ScalarConverter operator=(const ScalarConverter&);
-    public:
-        static void convert(const std::string&);
+
 };
