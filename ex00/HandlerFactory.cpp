@@ -2,6 +2,7 @@
 #include <CharHandler.hpp>
 #include <NumericsHandler.hpp>
 #include <stdlib.h>
+#include <iostream>
 
 bool isCharLitteral(const std::string& litteral)
 {
@@ -13,7 +14,10 @@ bool isNumLitteral(const std::string& litteral)
     char *end;
     std::strtod(litteral.c_str() , &end);
     
-    if ( *end != '\0' && *end != 'f' )
+    if ( *end != '\0' && *end != 'f')
+        return false;
+
+    if(*end != 0 && *(end + 1) != 0) 
         return false;
 
     return true;

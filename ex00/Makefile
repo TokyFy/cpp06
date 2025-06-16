@@ -1,5 +1,6 @@
 NAME = convert
-FLAGS = -Wall -Wextra -Werror -std=c++98 -g
+
+FLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp ScalarConverter.cpp HandlerFactory.cpp  ALiteralTypeHandler.cpp utils.cpp\
 	  handler/CharHandler.cpp handler/NumericsHandler.cpp 
 

@@ -3,8 +3,14 @@
 
 void castPrintChar(long double n)
 {
-    std::cout << "char : ";
-    
+    std::cout << "char   : ";
+   
+    if(std::isnan(n))
+    {
+        std::cout << "Impossible" << std::endl;
+        return;
+    }
+
     if(n > (long double)std::numeric_limits<char>::max() || n < (long double)std::numeric_limits<char>::min())
     {
         std::cout << "overflow" << std::endl;
@@ -23,8 +29,13 @@ void castPrintChar(long double n)
 
 void castIntPrint(long double n)
 {
-    std::cout << "int : ";
+    std::cout << "int    : ";
 
+    if(std::isnan(n))
+    {
+        std::cout << "Impossible" << std::endl;
+        return;
+    }
 
     if(n > (long double)std::numeric_limits<int>::max() || n < (long double)std::numeric_limits<int>::min())
     {
@@ -37,8 +48,14 @@ void castIntPrint(long double n)
 
 void castFloatPrint(long double n)
 {
-    std::cout << "float : ";
+    std::cout << "float  : ";
     long double fract;
+
+    if(std::isinf(n))
+    {
+        std::cout << ( (n < 0) ? "-inf" : "inf" ) << std::endl;
+        return;
+    }
 
     if(n > (long double)std::numeric_limits<float>::max() || n < -(long double)std::numeric_limits<float>::max())
     {
@@ -59,6 +76,12 @@ void castDoublePrint(long double n)
 {
     std::cout << "double : ";
     long double fract;
+
+    if(std::isinf(n))
+    {
+        std::cout << ( (n < 0) ? "-inff" : "inff" ) << std::endl;
+        return;
+    }
 
     if(n > (long double)std::numeric_limits<double>::max() || n < -(long double)std::numeric_limits<double>::max())
     {

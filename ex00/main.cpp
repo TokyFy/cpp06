@@ -13,6 +13,7 @@
 #include <ScalarConverter.hpp>
 #include <ALiteralTypeHandler.hpp>
 #include <iostream>
+#include <cmath>
 
 int main(int argc , char** argv)
 {
